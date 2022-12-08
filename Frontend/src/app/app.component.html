@@ -1,27 +1,24 @@
 
+ <!-- start navBar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li>
-        <a class="button14 nav-item nav-link" style="color: white">
-          <span class="sr-only"></span>Home</a>
+        <a class="button14 nav-item nav-link text-white" href="#">
+          <span class="sr-only"></span>Accueil</a>
       </li>
       <li>
-        <a class="button14 nav-item nav-link">About</a>
+        <a class="button14 nav-item nav-link text-white" href="/about">A propos</a>
         <!--  <a class="nav-link" (click)="onOpenModal(null, 'add')">Add Employee <span class="sr-only">(current)</span></a> -->
       </li>
       <li>
-        <a class="button14 nav-item nav-link">Competitions</a>
+        <a class="button14 nav-item nav-link text-white" href="/competitions">Compétitions</a>
       </li>
       <li>
-        <a class="button14 nav-item nav-link">Coupes</a>
-      </li>
-      <li>
-        <a class="button14 nav-item nav-link">Contact</a>
+        <a class="button14 nav-item nav-link text-white" href="/cups">Coupes</a>
       </li>
 
     </ul>
-
 
     <div class="dropdown ms-auto " style="margin-right : 1vw" >
       <a class="nav-item nav-link  dropdown-toggle" style="text-decoration : none; color: gray;"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,14 +37,18 @@
     </form>
   </div>
 </nav>
+  <!-- end navBar -->
+
+  <!-- start content -->
 <div class="content" role="main">
 
   <router-outlet></router-outlet>
 
 </div>  
+ <!-- end content -->
 
   <!-- start footer section -->
-<footer id="contact" class="page-footer p-5 text-md-left">
+<footer id="contact" class="page-footer p-5 text-md-left bg-dark text-white shadowBox">
   <div class="container py-5">
     <div class="row g-4">
       <div class="col-lg-3 col-md-6">
@@ -58,25 +59,25 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. 
           Quisquam, voluptates. 
         </p>
-        <a href="#"><i class="bi bi-facebook text-dark mx-1 lead"></i></a>
-        <a href="#"><i class="bi bi-twitter text-dark mx-1 lead"></i></a>
-        <a href="#"><i class="bi bi-instagram text-dark mx-1 lead"></i></a>
+        <a href="#"><i class="bi bi-facebook text-white mx-1 lead"></i></a>
+        <a href="#"><i class="bi bi-twitter text-white mx-1 lead"></i></a>
+        <a href="#"><i class="bi bi-instagram text-white mx-1 lead"></i></a>
       </div>
       <div class="col-lg-2 col-md-2 mx-auto">
         <h5 class="text-uppercase font-weight-bold mb-4">Liens
         </h5>
         <ul class="list-styled">
           <li class="mb-1">
-            <a href="#">Accueil</a>
+            <a class="text-white" href="#">Accueil</a>
           </li>
           <li class="mb-1">
-            <a href="#">A propos</a>
+            <a class="text-white" href="/about">A propos</a>
           </li>
           <li class="mb-1">
-            <a href="#">Compétitions</a>
+            <a class="text-white" href="/competitions">Compétitions</a>
           </li>
           <li class="mb-1">
-            <a href="#">Coupes</a>
+            <a class="text-white" href="/cups">Coupes</a>
           </li>
         </ul>
       </div>
@@ -102,7 +103,7 @@
   <!-- end footer section -->
 
   <!-- start footer bottom-->
-<footer class="p-3 bg-dark text-white text-center position-relative">
+<footer class="p-3 bg-dark text-white text-center position-relative shadowBox">
     <div class="container">
         <p class="mb-0">
             Copyright &copy; 2022 Fédération Kicker Da Vinci
