@@ -47,8 +47,13 @@
 }
 
 .navbar-nav > li{
+<<<<<<< HEAD
   margin-left:40px;
   margin-right:30px;
+=======
+  margin-left:20px;
+  margin-right:20px;
+>>>>>>> main
 }
 
 .navbar{
@@ -59,4 +64,11 @@
 .shadowBox {
   
   box-shadow: 0px 8px 6px 9px #111;
+}
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
 }
