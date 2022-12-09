@@ -1,11 +1,31 @@
-.bgimage{
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-}
-.tag{
-    background-color: wheat;
-}
-.imageUnder{
+@import '../bootstrap/bootstrap';
+@import '../bootstrap/variables';
+@import '../bootstrap/mixins';
+@import '~mdb-ui-kit/css/mdb.min.css';
 
+$font-primary: 'Lato',Arial, sans-serif;
+
+.ftco-section{
+  color: white;
+	font-family: $font-primary;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 16px;
+	line-height: 1.8;
+	font-weight: normal;
+	position: relative;
+	z-index: 0;
+	padding: 0;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode :initial;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 1;
+      filter : blur(30px);
+  }
+  100% {
+      opacity: 1;
+      filter : blur(0)
+  }
 }
