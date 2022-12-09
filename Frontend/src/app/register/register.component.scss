@@ -2,21 +2,21 @@
 @import '../bootstrap/variables';
 @import '../bootstrap/mixins';
 
-$font-primary: 'Lato',Arial, sans-serif;
 $primary: #fbceb5;
-
+$font-primary: 'Lato',Arial, sans-serif;
 
 .ftco-section{
-    background-image: url('../../assets/images/ImageAboutKicker.jpg');
-	font-family: $font-primary;
-	font-size: 16px;
+    font-family: $font-primary;
+    font-size: 16px;
 	line-height: 1.8;
 	font-weight: normal;
-	position: relative;
+    background-image: url('../../assets/images/ImageAboutKicker.jpg');
+    color: lighten($black,50%);
+    position: relative;
 	z-index: 0;
 	padding: 0;
 	&:after{
-		position: absolute;
+		position: absolute; 
 		top: 0;
 		left: 0;
 		right: 0;
@@ -28,77 +28,12 @@ $primary: #fbceb5;
 	}
 }
 
-a {
-	transition: .3s all ease;
-	color: $primary;
-	&:hover, &:focus {
-		text-decoration: none !important;
-		outline: none !important;
-		box-shadow: none;
-	}
-}
-h1, h2, h3, h4, h5,
-.h1, .h2, .h3, .h4, .h5 {
-	line-height: 1.5;
-	font-weight: 400;
-	font-family: $font-primary;
-	color: $black;
-}
-
-.bg-primary{
-	background: $primary !important;
-}
-
-.ftco-section{
-	padding: 7em 0;
-}
-
-.ftco-no-pt{
-	padding-top: 0;
-}
-.ftco-no-pb{
-	padding-bottom: 0;
-}
-
-.login-wrap{
-	position: relative;
-	color: rgba(255,255,255,.9);
-	h3{
-		font-weight: 300;
-		color: $white;
-	}
-	.social{
-		width: 100%;
-		a{
-			width: 100%;
-			display: block;
-			border: 1px solid rgba(255,255,255,.4);
-			color: $black;
-			background: $white;
-			&:hover{
-				background: $black;
-				color: $white;
-				border-color: $black;
-			}
-		}
-	}
-}
-
 .form-group{
 	position: relative;
 }
 
-.field-icon {
-	position: absolute;
-	top: 50%;
-	right: 15px;
-	transform: translateY(-50%);
-	color: rgba(255,255,255,.9);
-}
-
-//FORM CONTROL
 .form-control{
-	background: transparent;
+    background: transparent;
 	border: none;
 	height: 50px;
 	color: rgba(255,255,255,1);
@@ -107,7 +42,7 @@ h1, h2, h3, h4, h5,
 	border-radius: 40px;
 	padding-left: 20px;
 	padding-right: 20px;
-	@include transition(.3s);
+    @include transition(.3s);
 	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	  color: rgba(255,255,255,.8) !important;
 	}
@@ -130,9 +65,6 @@ h1, h2, h3, h4, h5,
 		border-color: rgba(255,255,255,.4);
 	}
 }
-textarea.form-control {
-	height: inherit!important;
-}
 
 .btn {
     text-transform: uppercase;
@@ -149,3 +81,42 @@ textarea.form-control {
     }
 }
 
+.register-wrap{
+	position: relative;
+	color: rgba(255,255,255,.9);
+	h3{
+		font-weight: 300;
+		color: $white;
+	}
+	.links{
+		width: 100%;
+		a{
+			width: 50%;
+			border: 1px solid rgba(255,255,255,.4);
+			color: $black;
+			background: $white;
+			&:hover{
+				background: $black;
+				color: $white;
+				border-color: $black;
+			}
+		}
+	}
+}
+
+a {
+	transition: .3s all ease;
+	color: $primary;
+	&:hover, &:focus {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none;
+	}
+}
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	line-height: 1.5;
+	font-weight: 400;
+	font-family: $font-primary;
+	color: $black;
+}
