@@ -1,9 +1,9 @@
 export class User {
-  id : number | null = null;
+  id !: number
   firstName!: string;
   lastName!: string;
   birthDate!: Date;
   email!: string;
-  rankingPoints : number | null = null;
+  rankingPoints !: number;
   idClub : number | null = null;
 }
