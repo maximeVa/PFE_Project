@@ -1,0 +1,151 @@
+@import '../../bootstrap/bootstrap';
+@import '../../bootstrap/variables';
+@import '../../bootstrap/mixins';
+
+$font-primary: 'Lato',Arial, sans-serif;
+$primary: #fbceb5;
+
+
+.ftco-section{
+    background-image: url('https://github.com/maximeVa/PFE_Project/blob/main/Frontend/src/assets/images/ImageAboutKicker.jpg?raw=true');
+	font-family: $font-primary;
+	font-size: 16px;
+	line-height: 1.8;
+	font-weight: normal;
+	position: relative;
+	z-index: 0;
+	padding: 0;
+	&:after{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		background: $black;
+		opacity: .3;
+		z-index: -1;
+	}
+}
+
+a {
+	transition: .3s all ease;
+	color: $primary;
+	&:hover, &:focus {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none;
+	}
+}
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	line-height: 1.5;
+	font-weight: 400;
+	font-family: $font-primary;
+	color: $black;
+}
+
+.bg-primary{
+	background: $primary !important;
+}
+
+.ftco-section{
+	padding: 7em 0;
+}
+
+.ftco-no-pt{
+	padding-top: 0;
+}
+.ftco-no-pb{
+	padding-bottom: 0;
+}
+
+.login-wrap{
+	position: relative;
+	color: rgba(255,255,255,.9);
+	h3{
+		font-weight: 300;
+		color: $white;
+	}
+	.social{
+		width: 100%;
+		a{
+			width: 100%;
+			display: block;
+			border: 1px solid rgba(255,255,255,.4);
+			color: $black;
+			background: $white;
+			&:hover{
+				background: $black;
+				color: $white;
+				border-color: $black;
+			}
+		}
+	}
+}
+
+.form-group{
+	position: relative;
+}
+
+.field-icon {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	color: rgba(255,255,255,.9);
+}
+
+//FORM CONTROL
+.form-control{
+	background: transparent;
+	border: none;
+	height: 50px;
+	color: rgba(255,255,255,1);
+	border: 1px solid transparent;
+	background: rgba(255,255,255,.08);
+	border-radius: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	@include transition(.3s);
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: rgba(255,255,255,.8) !important;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+	  color: rgba(255,255,255,.8) !important;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+	  color: rgba(255,255,255,.8) !important;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+	  color: rgba(255,255,255,.8) !important;
+	}
+	&:hover, &:focus{
+		background: transparent;
+		outline: none;
+		box-shadow: none;
+		border-color: rgba(255,255,255,.4);
+	}
+	&:focus{
+		border-color: rgba(255,255,255,.4);
+	}
+}
+textarea.form-control {
+	height: inherit!important;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-size: 15px;
+	box-shadow: none!important;
+    color: $black;
+    background: $primary;
+    border-radius: 40px;
+    padding: 10px 30px;
+    border: 1px solid transparent;
+    @include transition(.3s);
+    &:hover{
+        background: lighten($red,10%);
+    }
+}
+
