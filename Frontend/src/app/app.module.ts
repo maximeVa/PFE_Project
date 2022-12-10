@@ -9,6 +9,7 @@ import { ImportantLinksComponent } from './important-links/important-links.compo
 import { GameRulesComponent } from './game-rules/game-rules.component';
 import { FederationRulesComponent } from './federation-rules/federation-rules.component';
 import { ArchivesComponent } from './archives/archives.component';
+import { CupComponent } from './cup/cup.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ArchivesComponent } from './archives/archives.component';
     ImportantLinksComponent,
     GameRulesComponent,
     FederationRulesComponent,
-    ArchivesComponent
+    ArchivesComponent,
+    CupComponent
   ],
   imports: [
     BrowserModule,

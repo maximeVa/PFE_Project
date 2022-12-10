@@ -6,6 +6,7 @@ import { ArchivesComponent } from './archives/archives.component';
 import { FederationRulesComponent } from './federation-rules/federation-rules.component';
 import { GameRulesComponent } from './game-rules/game-rules.component';
 import { ImportantLinksComponent } from './important-links/important-links.component';
+import { CupComponent } from './cup/cup.component';
 
 const routes: Routes = [
   {path: 'about', component: AboutComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'gameRules', component: GameRulesComponent},
   {path: 'fedRules', component: FederationRulesComponent},
   {path: 'links', component: ImportantLinksComponent},
-  {path: 'archives', component:ArchivesComponent}
+  {path: 'archives', component:ArchivesComponent},
+  {path: 'cups', component:CupComponent}
 ];
 
 @NgModule({
