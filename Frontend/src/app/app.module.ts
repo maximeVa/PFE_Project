@@ -9,6 +9,8 @@ import { AboutComponent } from './Abouts/about/about.component';
 import { LoginComponent } from './Auths/login/login.component';
 import { RegisterComponent } from './Auths/register/register.component';
 import { HomepageComponent } from './Homes/homepage/homepage.component';
+import { ListPlayersComponent } from './list-players/list-players.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -21,7 +23,8 @@ import { httpInterceptorProviders } from './helpers/http.interceptor';
     AboutComponent,
     HomepageComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ListPlayersComponent
   ],
   imports: [
     BrowserModule,
