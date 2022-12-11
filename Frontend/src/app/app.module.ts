@@ -11,6 +11,7 @@ import { HomepageComponent } from './Homes/homepage/homepage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { LeaderPlayerComponent } from './leader-player/leader-player.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     AboutComponent,
     HomepageComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LeaderPlayerComponent
   ],
   imports: [
     BrowserModule,

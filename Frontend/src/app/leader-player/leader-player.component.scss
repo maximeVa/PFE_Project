@@ -1,0 +1,9 @@
+@import '~mdb-ui-kit/css/mdb.min.css';
+
+.headerClassement{
+  color:white;
+}
+
+.firstACCC.accordion-button:not(.collapsed)::after {
+  background: none;
+}
