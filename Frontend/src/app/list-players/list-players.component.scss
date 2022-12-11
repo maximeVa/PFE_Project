@@ -1,3 +1,9 @@
+@import '../bootstrap/bootstrap';
+@import '../bootstrap/variables';
+@import '../bootstrap/mixins';
+
+$primary: white;
+
 .grid_header{
 	//font-weight: bold;
 	font-size: 19px;
@@ -16,4 +22,17 @@
 
 .grid_body {
 	background-color: white;
+}	
+
+a {
+	background-color: black;
+	transition: .3s all ease;
+	color: $primary;
+	&:hover, &:focus {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none;
+		background-color: darkgray;
+		color: black;
+	}
 }
