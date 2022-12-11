@@ -41,6 +41,24 @@
                 required
               />
             </div>
+            <!--<input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"> Date d'anniversaire </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            -->
+            <div class="form-group">
+              <input
+                id="password-field"
+                type="password"
+                class="form-control"
+                placeholder="Mot de passe"
+                required
+              />
+              <span
+                toggle="#password-field"
+                class="fa fa-fw fa-eye field-icon toggle-password"
+              ></span>
+            </div>
             <div class="form-group">
               <button type="submit" class="form-control btn px-3">
                 S'enregistrer

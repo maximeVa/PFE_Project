@@ -1,0 +1,43 @@
+@import '../../bootstrap/bootstrap';
+@import '../../bootstrap/variables';
+@import '../../bootstrap/mixins';
+
+$font-primary: 'Lato',Arial, sans-serif;
+
+.fadeIN{
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode :initial;
+}
+.ftco-section{
+  background-image: url('https://github.com/maximeVa/PFE_Project/blob/main/Frontend/src/assets/images/ImageAboutKicker.jpg?raw=true');
+	font-family: $font-primary;
+	font-size: 16px;
+	line-height: 1.8;
+	font-weight: normal;
+	position: relative;
+	z-index: 0;
+	padding: 0;
+
+	&:after{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		background: $black;
+		opacity: .3;
+		z-index: -1;
+	}
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 1;
+      filter : blur(30px);
+  }
+  100% {
+      opacity: 1;
+      filter : blur(0)
+  }
+}

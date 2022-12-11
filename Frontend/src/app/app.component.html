@@ -1,42 +1,50 @@
 
- <!-- start navBar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<!-- start navBar -->
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top">
+  <button
+  class="navbar-toggler"
+  type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarColor02">
+  <span class="navbar-toggler-icon"></span>
+</button>
   <div class="collapse navbar-collapse" id="navbarColor02">
+
     <ul class="navbar-nav">
       <li>
-        <a class="button14 nav-item nav-link text-white" href="#">
+        <a class="button14 nav-item nav-link text-white" href="/home">
           <span class="sr-only"></span>Accueil</a>
       </li>
       <li class="nav-item dropdown">
         <a class="button14 nav-link dropdown-toggle text-white" href="/about" > A propos </a>
-         <ul class="dropdown-menu dropdown-menu-dark">
+        <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="#"> Conseil d'administration </a></li>
             <li><a class="dropdown-item" href="#"> Liens importants </a></li>
             <li><a class="dropdown-item" href="#"> Règles de jeu </a></li>
             <li><a class="dropdown-item" href="#"> Règles de la fédération </a></li>
             <li><a class="dropdown-item" href="#"> Archives </a></li>
-         </ul>
+        </ul>
       </li>
       <li class="nav-item dropdown">
         <a class="button14 nav-link dropdown-toggle text-white" href="/competitions" > Compétitions </a>
-         <ul class="dropdown-menu dropdown-menu-dark">
+        <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="#"> Calendrier </a></li>
             <li><a class="dropdown-item"> ---------- </a></li>
             <li><a class="dropdown-item" href="#"> Division 1 </a></li>
             <li><a class="dropdown-item" href="#"> Division 2 </a></li>
-         </ul>
+        </ul>
       </li>
       <li>
         <a class="button14 nav-item nav-link text-white" href="/cups">Coupes</a>
       </li>
       <li class="nav-item dropdown">
         <a class="button14 nav-link dropdown-toggle text-white" href="/informations" > Informations </a>
-         <ul class="dropdown-menu dropdown-menu-dark">
+        <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="/listPlayers"> Liste des joueurs </a></li>
             <li><a class="dropdown-item" href="#"> Classement des joueurs </a></li>
             <li><a class="dropdown-item" href="#"> Liste des clubs </a></li>
             <li><a class="dropdown-item" href="#"> Formulaire </a></li>
-         </ul>
+        </ul>
       </li>
       <li>
         <a class="button14 nav-item nav-link text-white" href="/login">S'identifier</a>
@@ -56,7 +64,7 @@
         <li><a class="dropdown-item" href="#">Something else here</a></li>
       </ul>
     </div>
-     -->
+    -->
 
     <form class="form-inline my-2 my-lg-0">
       <!-- <input type="search" (ngModelChange)="searchEmployees(key.value)" #key="ngModel" ngModel
@@ -64,6 +72,7 @@
     </form>
   </div>
 </nav>
+
   <!-- end navBar -->
 
   <!-- start content -->
@@ -71,7 +80,7 @@
 
   <router-outlet></router-outlet>
 
-</div>  
+</div>
  <!-- end content -->
 
   <!-- start footer section -->
@@ -83,8 +92,8 @@
           Fédération Kicker Da Vinci
         </h5>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Quisquam, voluptates. 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Quisquam, voluptates.
         </p>
         <a href="#"><i class="bi bi-facebook text-white mx-1 lead"></i></a>
         <a href="#"><i class="bi bi-twitter text-white mx-1 lead"></i></a>
@@ -111,11 +120,11 @@
       <div class="col-lg-3 col-xs-12 location">
         <h5 class="text-uppercase font-weight-bold mb-4">Localisation</h5>
         <p class="d-flex">
-          <i class="bi bi-geo-alt text-primary mx-2 lead"></i> 
+          <i class="bi bi-geo-alt text-primary mx-2 lead"></i>
           21 rue de la paix, 75000 Paris
         </p>
         <p class="d-flex align-items-center">
-          <i class="bi bi-phone text-primary mx-2 lead"></i> 
+          <i class="bi bi-phone text-primary mx-2 lead"></i>
           +32 6 00 00 00 00
         </p>
         <p class="d-flex align-items-center">
@@ -136,6 +145,5 @@
             Copyright &copy; 2022 Fédération Kicker Da Vinci
         </p>
     </div>
-
 </footer>
   <!-- end footer bottom-->
