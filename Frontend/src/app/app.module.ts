@@ -13,6 +13,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { ListPlayersComponent } from './list-players/list-players.component';
+import { ListClubsComponent } from './list-clubs/list-clubs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { ListPlayersComponent } from './list-players/list-players.component';
     HomepageComponent,
     LoginComponent,
     RegisterComponent,
-    ListPlayersComponent
+    ListPlayersComponent,
+    ListClubsComponent
   ],
   imports: [
     BrowserModule,
