@@ -1,29 +1,21 @@
-@import '../bootstrap/bootstrap';
-@import '../bootstrap/variables';
-@import '../bootstrap/mixins';
+.grid_header{
+	font-weight: bold;
+	font-size: 18px;
+}
 
-$primary: #fbceb5;
-$font-primary: 'Lato',Arial, sans-serif;
+.row {
+	padding: 10px;
+	font-family: Georgia, serif;
+	
+	
+}
 
-.ftco-section{
-    font-family: $font-primary;
-    font-size: 16px;
-	line-height: 1.8;
-	font-weight: normal;
-    background-image: url('https://github.com/maximeVa/PFE_Project/blob/main/Frontend/src/assets/images/ImageAboutKicker.jpg?raw=true');
-    color: lighten($black,50%);
-    position: relative;
-	z-index: 0;
-	padding: 0;
-	&:after{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		content: '';
-		background: $black;
-		opacity: .3;
-		z-index: -1;
+.grid_body {
+	.row {
+		border-bottom: 0.5px solid black;
 	}
+}
+
+.grid_body {
+	background-color: white;
 }
