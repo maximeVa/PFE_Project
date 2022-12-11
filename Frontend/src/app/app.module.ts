@@ -14,6 +14,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import { ListPlayersComponent } from './list-players/list-players.component';
 import { ListClubsComponent } from './list-clubs/list-clubs.component';
+import { DetailsPlayerComponent } from './details-player/details-player.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { ListClubsComponent } from './list-clubs/list-clubs.component';
     RegisterComponent,
     ListPlayersComponent,
     ListClubsComponent,
+    DetailsPlayerComponent,
   ],
   imports: [
     BrowserModule,
