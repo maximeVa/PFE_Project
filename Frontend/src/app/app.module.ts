@@ -22,7 +22,7 @@ import { ListClubsComponent } from './list-clubs/list-clubs.component';
     LoginComponent,
     RegisterComponent,
     ListPlayersComponent,
-    ListClubsComponent
+    ListClubsComponent,
   ],
   imports: [
     BrowserModule,
