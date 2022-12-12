@@ -1,0 +1,29 @@
+@import '../bootstrap/bootstrap';
+@import '../bootstrap/variables';
+@import '../bootstrap/mixins';
+
+$primary: white;
+
+.grid_header{
+	//font-weight: bold;
+	font-size: 19px;
+}
+
+.row {
+    .dark{
+        background-color: rgb(52, 58, 64);
+    }
+	font-family: Georgia, serif;
+}
+
+.grid_body {
+    background-color: white;
+	.row {
+		border-bottom: 0.5px solid black;
+	}
+}
+
+.col-1, .col-4{
+    padding: 10px;
+    
+}

@@ -6,6 +6,7 @@ import { RegisterComponent } from './Auths/register/register.component';
 import { HomepageComponent } from './Homes/homepage/homepage.component';
 import { ListPlayersComponent } from './list-players/list-players.component';
 import { ListClubsComponent } from './list-clubs/list-clubs.component';
+import { GameRecapsComponent } from './game-recaps/game-recaps.component';
 
 const routes: Routes = [
   {path: 'home', component: HomepageComponent},
@@ -14,6 +15,9 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'listPlayers', component: ListPlayersComponent},
   {path: 'listClubs', component: ListClubsComponent},
+  // a retirer apres car c'est juste pour tester la page GameRecaps
+  {path: 'gameRecaps', component: GameRecapsComponent},
+
 
 ];
 
