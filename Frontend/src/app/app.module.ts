@@ -22,7 +22,7 @@ import { ListClubsComponent } from './list-clubs/list-clubs.component';
     HomepageComponent,
     LoginComponent,
     RegisterComponent,
-    CompetitionComponent
+    CompetitionComponent,
     ListPlayersComponent,
     ListClubsComponent,
   ],
