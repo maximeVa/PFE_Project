@@ -25,7 +25,7 @@ import { httpInterceptorProviders } from './helpers/http.interceptor';
     LoginComponent,
     RegisterComponent,
     ListPlayersComponent,
-    ListClubsComponent
+    ListClubsComponent,
   ],
   imports: [
     BrowserModule,
