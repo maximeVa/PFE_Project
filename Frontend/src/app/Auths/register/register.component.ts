@@ -1,23 +1,46 @@
-import { Component } from '@angular/core';
-import { NewUser } from '../models/NewUser';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.scss'],
 })
-export class RegisterComponent {
-  user: NewUser = new NewUser();
-  constructor() { 
-    console.log('RegisterComponent constructor');
-    const user = {}  // user is a local variable
-  }
+export class RegisterComponent implements OnInit {
+  form: any = {
+    firstname: null,
+    lastname: null,
+    email: null,
+    password: null,
+    birthDate: null,
+    rankingPoints: null,
+  };
 
-  ngOnInit() {
-    console.log('RegisterComponent ngOnInit');
-  }
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
 
-  register() {
-    console.log('RegisterComponent register');
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {}
+
+  onSubmit(): void {
+    const { firstname, lastname, email, password, birthDate } =
+      this.form;
+    //console.log(firstname, lastname, email, password, birthDate );
+    // 0 is the rankingPoints because it is a new user
+    this.authService
+      .register(firstname, lastname, email, password, birthDate)
+      .subscribe({
+        next: (data) => {
+          console.log(data);
+          this.isSuccessful = true;
+          this.isSignUpFailed = false;
+        },
+        error: (err) => {
+          this.errorMessage = err.error.message;
+          this.isSignUpFailed = true;
+        },
+      });
   }
 }
