@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { LeaderPlayerComponent } from './leader-player/leader-player.component';
+import { CompetitionComponent } from './competition/competition.component';
 
 import { httpInterceptorProviders } from './helpers/http.interceptor';
 @NgModule({
@@ -24,6 +25,7 @@ import { httpInterceptorProviders } from './helpers/http.interceptor';
     LoginComponent,
     RegisterComponent,
     LeaderPlayerComponent,
+    CompetitionComponent,
     ListPlayersComponent,
     ListClubsComponent,
   ],
