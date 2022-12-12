@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
     //console.log(firstname, lastname, email, password, birthDate );
     // 0 is the rankingPoints because it is a new user
     this.authService
-      .register(firstname, lastname, email, password, birthDate, 0)
+      .register(firstname, lastname, email, password, birthDate)
       .subscribe({
         next: (data) => {
           console.log(data);

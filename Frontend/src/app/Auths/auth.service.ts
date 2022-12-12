@@ -3,8 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environments';
 import { Observable } from 'rxjs';
 
-const AUTH_API = environment.apiBaseUrl + "auth";
-//'http://localhost:8080/api/auth/';
+const AUTH_API = environment.apiBaseUrl;
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -27,17 +26,16 @@ export class AuthService {
     );
   }
 
-  register(firstname: string, lastname: string, email: string, password: any, birthDate: Date, rankingPoints: number): Observable<any> {
+  register(firstname: string, lastname: string, email: string, password: string, birthDate: Date): Observable<any> {
     return this.http.post(
-      AUTH_API + 'signup',
-      {
-        firstname,
-        lastname,
+      AUTH_API + 'user', 
+      { 
         email,
         password,
         birthDate,
-        rankingPoints,
-      },
+        firstname,
+        lastname,
+      }, 
       httpOptions
     );
   }
