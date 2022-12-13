@@ -7,8 +7,8 @@ import { AboutComponent } from './about/about.component';
 import { AdminBoardComponent } from './admin-board/admin-board.component';
 import { ImportantLinksComponent } from './important-links/important-links.component';
 import { GameRulesComponent } from './game-rules/game-rules.component';
-import { FederationRulesComponent } from './federation-rules/federation-rules.component';
 import { ArchivesComponent } from './archives/archives.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,12 +18,12 @@ import { ArchivesComponent } from './archives/archives.component';
     AdminBoardComponent,
     ImportantLinksComponent,
     GameRulesComponent,
-    FederationRulesComponent,
     ArchivesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

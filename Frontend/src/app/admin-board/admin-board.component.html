@@ -1,1 +1,6 @@
-<p>admin-board works!</p>
+<div *ngFor="let admin of admins" class="card">
+    <div>Name: {{ admin.name }}</div>
+    <div>Last Name: {{ admin.lastname }}</div>
+    <div>Email: {{ admin.email }}</div>
+    <div>Birth Date: {{ admin.birthdate }}</div>
+  </div>
