@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://kickervinci.azurewebsites.net/",
+    "secure": false
+  }
+}

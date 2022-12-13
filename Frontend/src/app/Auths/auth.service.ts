@@ -28,14 +28,14 @@ export class AuthService {
 
   register(firstname: string, lastname: string, email: string, password: string, birthDate: Date): Observable<any> {
     return this.http.post(
-      AUTH_API + 'user', 
-      { 
+      "https://kickervinci.azurewebsites.net/user",
+      {
         email,
         password,
         birthDate,
         firstname,
         lastname,
-      }, 
+      },
       httpOptions
     );
   }

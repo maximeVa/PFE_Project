@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:9003/' // <---- Inserer ici le port du backend
+  apiBaseUrl: 'https://kickervinci.azurewebsites.net/' // <---- Inserer ici le port du backend
 };
 
 /*
