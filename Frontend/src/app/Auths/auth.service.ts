@@ -28,7 +28,7 @@ export class AuthService {
 
   register(firstname: string, lastname: string, email: string, password: string, birthDate: Date): Observable<any> {
     return this.http.post(
-      "https://kickervinci.azurewebsites.net/",
+      "https://kickervinci.azurewebsites.net/user",
       {
         email,
         password,
