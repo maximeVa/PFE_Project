@@ -3,6 +3,7 @@
 @import '../bootstrap/mixins';
 
 $primary: white;
+$color: rgb(52, 58, 64);
 
 .grid_header{
 	font-size: 19px;
@@ -22,11 +23,12 @@ $primary: white;
 	}
 }
 
-.col-1, .col2 .col-3, .col-4, .col-8, .col-9, .col-10, .col-11, .col-12, .col {
+.col-1, .col2 .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col {
     padding: 10px;
     
 }
 
 .grey {
-    background-color: #71797E;
+    //background-color: #71797E;
+    background-color: lighten(rgb(52, 58, 64),8%);
 }
