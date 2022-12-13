@@ -38,7 +38,7 @@ import { httpInterceptorProviders } from './helpers/http.interceptor';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
