@@ -19,16 +19,20 @@ $color: rgb(52, 58, 64);
 .grid_body {
     background-color: white;
 	.row {
-		border-bottom: 0.5px solid black;
+		border-bottom: 0.5px solid white;
+        height: 11em;
 	}
 }
 
 .col-1, .col2 .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col {
     padding: 10px;
-    
 }
 
 .grey {
     //background-color: #71797E;
     background-color: lighten(rgb(52, 58, 64),8%);
+}
+
+select {
+    width: 85%;
 }
