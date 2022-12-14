@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { AboutComponent } from './Abouts/about/about.component';
 import { LoginComponent } from './Auths/login/login.component';
 import { RegisterComponent } from './Auths/register/register.component';
@@ -15,6 +16,12 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { LeaderPlayerComponent } from './leader-player/leader-player.component';
 import { CompetitionComponent } from './competition/competition.component';
+import { AdminBoardComponent } from './admin-board/admin-board.component';
+import { ImportantLinksComponent } from './important-links/important-links.component';
+import { GameRulesComponent } from './game-rules/game-rules.component';
+import { ArchivesComponent } from './archives/archives.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { httpInterceptorProviders } from './helpers/http.interceptor';
 @NgModule({
@@ -28,6 +35,10 @@ import { httpInterceptorProviders } from './helpers/http.interceptor';
     CompetitionComponent,
     ListPlayersComponent,
     ListClubsComponent,
+    AdminBoardComponent,
+    ImportantLinksComponent,
+    GameRulesComponent,
+    ArchivesComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +48,7 @@ import { httpInterceptorProviders } from './helpers/http.interceptor';
     MatNativeDateModule,
     HttpClientModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
