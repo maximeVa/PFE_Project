@@ -20,6 +20,7 @@
     padding: 0;
     width: auto;
     list-style-type: none;
+
   }
   
   .card {
@@ -30,6 +31,7 @@
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
+    border-radius: 10%;
   }
   
   .card__image {      
