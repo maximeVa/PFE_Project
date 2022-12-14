@@ -6,6 +6,6 @@ export interface Competition {
   maxSlots: number;
   note: string;
   teams: Team[];
-  games: Game[];
+  gamesPlayed: Game[];
 
 }

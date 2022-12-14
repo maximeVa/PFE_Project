@@ -9,9 +9,9 @@ import { Team } from '../Team';
   styleUrls: ['./competition.component.scss']
 })
 export class CompetitionComponent implements OnInit {
-  public competitions: Competition ;
-  public teams: Team[] ;
-  public games: Game[] ;
+  public competitions: Competition[] = [] ;
+  public teams: Team[]= [] ;
+  public games: Game[]= [] ;
 
 
   constructor(private competitionsService: CompetitionsService) { }
@@ -19,13 +19,22 @@ export class CompetitionComponent implements OnInit {
     this.getCompetitions();
   }
 
-  public getCompetitions(): void {
-    this.competitionsService.getCompetitions().subscribe(
-      (response: Competition) => {
-        this.competitions = response;
-        this.teams = this.competitions.teams;
-        this.games = this.competitions.games;
-      },
+  public getCompetitions() {
+    this.competitionsService.getCompetitions().subscribe((competitionsData) =>{
+      for (let index = 0; index < competitionsData.length; index++) {
+        const competitionData = competitionsData[index];
+        console.log(competitionData);
+        competitionData.teams.forEach(team => {
+          this.teams.push(team);
+        });
+
+        competitionData.gamesPlayed.forEach(game => {
+          this.games.push(game);
+        });
+
+      }
+
+    },
       (error: HttpErrorResponse)=>{
         alert(error.message);
       }

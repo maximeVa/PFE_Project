@@ -17,8 +17,8 @@ export class CompetitionsService {
   private AUTH_API = environment.apiBaseUrl;
   constructor(private http: HttpClient) {}
 
-  public getCompetitions(): Observable<Competition> {
-    return this.http.get<Competition>(`${this.AUTH_API}divisions/div1`);
+  public getCompetitions(): Observable<Competition[]> {
+    return this.http.get<Competition[]>(`${this.AUTH_API}divisions/Kickerpremierleague`);
   }
 
 }
