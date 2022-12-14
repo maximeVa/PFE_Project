@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environments';
 import { Observable } from 'rxjs';
 
-const AUTH_API = environment.apiBaseUrl;
+const BASE_URL = environment.apiBaseUrl;
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -17,7 +17,7 @@ export class AuthService {
 
   login(email: string, password: string): Observable<any> {
     return this.http.post(
-      AUTH_API + 'signin',
+      BASE_URL + '/authentication/connect',
       {
         email,
         password,
@@ -28,7 +28,7 @@ export class AuthService {
 
   register(firstname: string, lastname: string, email: string, password: string, birthDate: Date): Observable<any> {
     return this.http.post(
-      "https://kickervinci.azurewebsites.net/user",
+      BASE_URL + "user",
       {
         email,
         password,
@@ -40,7 +40,8 @@ export class AuthService {
     );
   }
 
+  //encore à check
   logout(): Observable<any> {
-    return this.http.post(AUTH_API + 'signout', { }, httpOptions);
+    return this.http.post(BASE_URL + 'signout', { }, httpOptions);
   }
 }
