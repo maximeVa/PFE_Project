@@ -31,15 +31,15 @@ export class LoginComponent implements OnInit{
     console.log(email, password);
     this.authService.login(email, password).subscribe({
       next: data => {
-        
-        this.storageService.saveUser(data);
 
+        this.storageService.saveUser(data.token);
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().roles;
         this.reloadPage();
       },
       error: err => {
+        console.log(err)
         this.errorMessage = err.error.message;
         this.isLoginFailed = true;
       }
