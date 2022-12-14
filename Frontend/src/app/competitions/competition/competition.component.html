@@ -1,5 +1,5 @@
 <main class="st_viewport">
-  <div class="st_wrap_table" data-table_id="0">
+  <div *ngFor="let competition" class="st_wrap_table" data-table_id="0">
     <header class="st_table_header">
       <h2>1ère Division A</h2>
         <p>02-12-2022 - journée de jeu précédente - 1A</p>
@@ -16,7 +16,7 @@
         <tbody>
           <tr>
             <th scope="row"></th>
-            <td>FC Célibat</td>
+            <td>{{competition?.id}}</td>
             <td>FC CochonDinde</td>
             <td>30-12-22</td>
             <td><a href="#"><i class="bi bi-file-earmark-arrow-down"></i></a></td>

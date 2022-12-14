@@ -5,7 +5,7 @@ import { AboutComponent } from './Abouts/about/about.component';
 import { LoginComponent } from './Auths/login/login.component';
 import { RegisterComponent } from './Auths/register/register.component';
 import { HomepageComponent } from './Homes/homepage/homepage.component';
-import { CompetitionComponent } from './competition/competition.component';
+import { CompetitionComponent } from './competitions/competition/competition.component';
 import { ListPlayersComponent } from './list-players/list-players.component';
 import { ListClubsComponent } from './list-clubs/list-clubs.component';
 

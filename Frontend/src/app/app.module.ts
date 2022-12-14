@@ -14,8 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { LeaderPlayerComponent } from './leader-player/leader-player.component';
-import { CompetitionComponent } from './competition/competition.component';
-
+import { CompetitionComponent } from './competitions/competition/competition.component';
+import { CompetitionsService } from './competitions/competitions.service';
 import { httpInterceptorProviders } from './helpers/http.interceptor';
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { httpInterceptorProviders } from './helpers/http.interceptor';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders,CompetitionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
