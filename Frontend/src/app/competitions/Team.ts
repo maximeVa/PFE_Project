@@ -1,4 +1,4 @@
-import { userDTO } from "../Auths/users.model";
+import { user } from "./user";
 import { Division } from "./Division";
 export interface Team {
   name : string;
@@ -7,7 +7,7 @@ export interface Team {
   phone : string;
   divisionPoints : number;
   division : Division;
-  captain : userDTO;
-  players : userDTO[];
+  captain : user;
+  players : user[];
 
 }
