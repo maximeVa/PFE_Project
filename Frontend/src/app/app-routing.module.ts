@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'leaderboardPlayer', component: LeaderPlayerComponent},
-  {path: 'competition', component: CompetitionComponent},
+  {path: 'competition/:divisionName', component: CompetitionComponent},
   {path: 'listPlayers', component: ListPlayersComponent},
   {path: 'listClubs', component: ListClubsComponent},
 

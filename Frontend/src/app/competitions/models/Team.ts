@@ -9,5 +9,5 @@ export interface Team {
   division : Division;
   captain : user;
   players : user[];
-
+  gamePlayedTotal : number;
 }

@@ -42,15 +42,10 @@ pre{
 .st_viewport{
   color: rgb(27,30,36);
 }
-/* ###  Table wrap */
-.st_wrap_table{
-
-}
-/* ##   header */
+/* ## header */
 .st_table_header{
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
+  position:sticky;
+  top: 50px;
   z-index: 1;
   background-color: rgb(27,30,36);
   color: rgb(220,220,220);
