@@ -9,10 +9,6 @@ body {
   Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.main-container {
-  padding: 30px;
-}
-
 /* HEADING */
 
 .heading {
@@ -20,6 +16,8 @@ body {
 }
 
 .heading__title {
+  text-align: left;
+  position: sticky;
   font-weight: 600;
 }
 
@@ -35,6 +33,10 @@ body {
   color: inherit;
 }
 
+#filter-select #lable {
+  position: fixed;
+}
+
 /* CARDS */
 
 .cards {
@@ -43,11 +45,14 @@ body {
   justify-content: space-between;
 }
 
+
 .card {
   margin: 20px;
   padding: 20px;
   width: 500px;
   min-height: 200px;
+  max-height: 600px;
+  overflow: scroll;
   display: grid;
   grid-template-rows: 20px 50px 1fr 50px;
   border-radius: 10px;
