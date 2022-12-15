@@ -20,7 +20,6 @@ import { AdminBoardComponent } from './admin-board/admin-board.component';
 import { ImportantLinksComponent } from './important-links/important-links.component';
 import { GameRulesComponent } from './game-rules/game-rules.component';
 import { ArchivesComponent } from './archives/archives.component';
-import { HttpClientModule } from '@angular/common/http';
 
 
 import { httpInterceptorProviders } from './helpers/http.interceptor';
