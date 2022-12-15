@@ -8,6 +8,12 @@ import { HomepageComponent } from './Homes/homepage/homepage.component';
 import { CompetitionComponent } from './competitions/competition/competition.component';
 import { ListPlayersComponent } from './list-players/list-players.component';
 import { ListClubsComponent } from './list-clubs/list-clubs.component';
+import { AdminBoardComponent } from './admin-board/admin-board.component';
+import { ArchivesComponent } from './archives/archives.component';
+import { GameRulesComponent } from './game-rules/game-rules.component';
+import { ImportantLinksComponent } from './important-links/important-links.component';
+
+import { GameRecapsComponent } from './game-recaps/game-recaps.component';
 
 const routes: Routes = [
   {path: 'home', component: HomepageComponent},
@@ -18,7 +24,14 @@ const routes: Routes = [
   {path: 'competition/:divisionName', component: CompetitionComponent},
   {path: 'listPlayers', component: ListPlayersComponent},
   {path: 'listClubs', component: ListClubsComponent},
+  // a retirer apres car c'est juste pour tester la page GameRecaps
+  {path: 'gameRecaps', component: GameRecapsComponent},
 
+
+  {path: 'adminBoard', component: AdminBoardComponent},
+  {path: 'gameRules', component: GameRulesComponent},
+  {path: 'links', component: ImportantLinksComponent},
+  {path: 'archives', component:ArchivesComponent}
 ];
 
 
