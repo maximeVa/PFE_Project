@@ -46,13 +46,26 @@
             <li><a class="dropdown-item" routerLink="#"> Formulaire </a></li>
         </ul>
       </li>
-      <li>
-        <a class="button14 nav-item nav-link text-white" routerLink="login">S'identifier</a>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="button14 nav-link" routerLink="register">Sign Up</a>
       </li>
-      <li>
-        <a class="button14 nav-item nav-link text-white" routerLink="register">S'enregistrer</a>
+      <li class="nav-item">
+        <a href="/login" class="button14 nav-link" routerLink="login">Login</a>
       </li>
     </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="button14 nav-link" routerLink="profile"></a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+
     <!--
     <div class="dropdown ms-auto " style="margin-right : 1vw" >
       <a class="nav-item nav-link  dropdown-toggle" style="text-decoration : none; color: gray; cursor: pointer;"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,11 +78,6 @@
       </ul>
     </div>
     -->
-
-    <form class="form-inline my-2 my-lg-0">
-      <!-- <input type="search" (ngModelChange)="searchEmployees(key.value)" #key="ngModel" ngModel
-    name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search employees..." required> -->
-    </form>
   </div>
 </nav>
 
