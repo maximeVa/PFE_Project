@@ -8,6 +8,11 @@ import { HomepageComponent } from './Homes/homepage/homepage.component';
 import { CompetitionComponent } from './competition/competition.component';
 import { ListPlayersComponent } from './list-players/list-players.component';
 import { ListClubsComponent } from './list-clubs/list-clubs.component';
+import { AdminBoardComponent } from './admin-board/admin-board.component';
+import { ArchivesComponent } from './archives/archives.component';
+import { GameRulesComponent } from './game-rules/game-rules.component';
+import { ImportantLinksComponent } from './important-links/important-links.component';
+
 import { GameRecapsComponent } from './game-recaps/game-recaps.component';
 
 const routes: Routes = [
@@ -23,6 +28,10 @@ const routes: Routes = [
   {path: 'gameRecaps', component: GameRecapsComponent},
 
 
+  {path: 'adminBoard', component: AdminBoardComponent},
+  {path: 'gameRules', component: GameRulesComponent},
+  {path: 'links', component: ImportantLinksComponent},
+  {path: 'archives', component:ArchivesComponent}
 ];
 
 

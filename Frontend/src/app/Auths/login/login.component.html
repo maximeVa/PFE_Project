@@ -4,23 +4,44 @@
       <div class="col-md-6 col-lg-4">
         <div class="login-wrap p-0">
           <h3 class="mb-4 text-center">Avez-vous un compte?</h3>
-          <form action="#" class="signin-form">
+          <form
+            class="signin-form"
+            *ngIf="!isLoggedIn"
+            name="form"
+            (ngSubmit)="f.form.valid && onSubmit()"
+            #f="ngForm"
+            novalidate
+          >
             <div class="form-group">
               <input
                 type="text"
                 class="form-control"
+                name="email"
+                [(ngModel)]="form.email"
+                required
+                #email="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
                 placeholder="Email"
                 required
               />
+              <div *ngIf="email.errors && f.submitted" class="invalid-feedback">
+                email is required!
+              </div>
             </div>
             <div class="form-group">
               <input
                 id="password-field"
                 type="password"
                 class="form-control"
+                name="password"
+                [(ngModel)]="form.password"
+                required
+                #password="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && password.errors }"
                 placeholder="Mot de passe"
                 required
               />
+
               <span
                 toggle="#password-field"
                 class="fa fa-fw fa-eye field-icon toggle-password"
@@ -33,6 +54,11 @@
               >
                 S'identifier
               </button>
+            </div>
+            <div class="form-group">
+              <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger" role="alert">
+                Login failed: {{ errorMessage }}
+              </div>
             </div>
             <div class="form-group d-md-flex">
               <div class="w-50 form-check">
@@ -51,6 +77,11 @@
               </div>
             </div>
           </form>
+          <!--
+          <div class="alert alert-success" *ngIf="isLoggedIn">
+            Logged in as {{ roles }}.
+          </div>
+          -->
           <p class="w-100 text-center">&mdash; Ou s'identifier avec &mdash;</p>
           <div class="social d-flex text-center">
             <a href="#" class="px-2 py-2 mr-md-1 rounded"

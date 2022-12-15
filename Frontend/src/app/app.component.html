@@ -12,26 +12,26 @@
 
     <ul class="navbar-nav">
       <li>
-        <a class="button14 nav-item nav-link text-white" href="/home">
+        <a class="button14 nav-item nav-link text-white" routerLink="home">
           <span class="sr-only"></span>Accueil</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="button14 nav-link dropdown-toggle text-white" href="/about" > A propos </a>
-        <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#"> Conseil d'administration </a></li>
-            <li><a class="dropdown-item" href="#"> Liens importants </a></li>
-            <li><a class="dropdown-item" href="#"> Règles de jeu </a></li>
-            <li><a class="dropdown-item" href="#"> Règles de la fédération </a></li>
-            <li><a class="dropdown-item" href="#"> Archives </a></li>
-        </ul>
+        <a class="button14 nav-link dropdown-toggle text-white" routerLink="about"> A propos </a>
+
+         <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" routerLink="adminBoard"> Conseil d'administration </a></li>
+            <li><a class="dropdown-item" routerLink="links"> Liens importants </a></li>
+            <li><a class="dropdown-item" routerLink="gameRules"> Règles de jeu </a></li>
+            <li><a class="dropdown-item" routerLink="archives"> Archives </a></li>
+         </ul>
       </li>
       <li class="nav-item dropdown">
-        <a class="button14 nav-link dropdown-toggle text-white" href="/competition" > Compétitions </a>
+        <a class="button14 nav-link dropdown-toggle text-white" routerLink="competition"> Compétitions </a>
         <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#"> Calendrier </a></li>
+            <li><a class="dropdown-item" routerLink="#"> Calendrier </a></li>
             <li><a class="dropdown-item"> ---------- </a></li>
-            <li><a class="dropdown-item" href="#"> Division 1 </a></li>
-            <li><a class="dropdown-item" href="#"> Division 2 </a></li>
+            <li><a class="dropdown-item" routerLink="#"> Division 1 </a></li>
+            <li><a class="dropdown-item" routerLink="#"> Division 2 </a></li>
         </ul>
       </li>
       <li>
@@ -40,19 +40,34 @@
       <li class="nav-item dropdown">
         <a class="button14 nav-link dropdown-toggle text-white" href="/informations" > Informations </a>
         <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="/listPlayers"> Liste des joueurs </a></li>
-            <li><a class="dropdown-item" href="/leaderboardPlayer"> Classement des joueurs </a></li>
-            <li><a class="dropdown-item" href="/listClubs"> Liste des clubs </a></li>
-            <li><a class="dropdown-item" href="#"> Formulaire </a></li>
+            <li><a class="dropdown-item" routerLink="listPlayers"> Liste des joueurs </a></li>
+            <li><a class="dropdown-item" routerLink="leaderboardPlayer"> Classement des joueurs </a></li>
+            <li><a class="dropdown-item" routerLink="listClubs"> Liste des clubs </a></li>
+            <li><a class="dropdown-item" routerLink="#"> Formulaire </a></li>
         </ul>
       </li>
-      <li>
-        <a class="button14 nav-item nav-link text-white" href="/login">S'identifier</a>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="button14 nav-link" routerLink="register">Sign Up</a>
       </li>
-      <li>
-        <a class="button14 nav-item nav-link text-white" href="/register">S'enregistrer</a>
+      <li class="nav-item">
+        <a href="/login" class="button14 nav-link" routerLink="login">Login</a>
       </li>
     </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <!--
+      <li class="nav-item">
+        <a href="/profile" class="button14 nav-link" routerLink="profile"></a>
+      </li>
+      -->
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+
     <!--
     <div class="dropdown ms-auto " style="margin-right : 1vw" >
       <a class="nav-item nav-link  dropdown-toggle" style="text-decoration : none; color: gray; cursor: pointer;"  id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,11 +80,6 @@
       </ul>
     </div>
     -->
-
-    <form class="form-inline my-2 my-lg-0">
-      <!-- <input type="search" (ngModelChange)="searchEmployees(key.value)" #key="ngModel" ngModel
-    name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search employees..." required> -->
-    </form>
   </div>
 </nav>
 

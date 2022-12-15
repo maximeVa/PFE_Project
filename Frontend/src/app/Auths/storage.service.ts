@@ -10,6 +10,7 @@ export class StorageService {
 
   clean(): void {
     window.sessionStorage.clear();
+    console.log("cleaned");
   }
 
   public saveUser(user: any): void {
