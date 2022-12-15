@@ -1,12 +1,37 @@
+<div>
+  <label for="filter-select" id="lable"> Filter:</label>
 
- <div>
-    <ul class="cards">
-     <div *ngFor="let game of games" class="card col-sm-6">  
-           <li>
-               <div class="card__overlay">
-                <p>date : {{game.competition.date}}</p>
-               </div>
-           </li>      
-     </div>
-   </ul>
-   </div>
+  <select #searchBox name="filters" id="filter-select" (input)="sortBy(searchBox.value)">
+    <option value="">--Please choose an option--</option>
+    <option value="coupe">Coupes</option>
+    <option value="competition">Competitions</option>
+    <option value="club">Clubs</option>
+    <option value="division">Divisions</option>
+  </select>
+  <ul class="cards">
+    <div *ngFor="let game of games" class="card col-sm-6">
+      <div class="main-container">
+        <div class="heading">
+          <h5 class="heading__title">Matchs</h5>
+          <div class="card__overlay" *ngIf="game.guestClub != null && game.hostClub != null">
+            <h6 id="heading__title">{{game.guestClub.division.name}}</h6>
+            <p>{{game.hostClub.name}}         -       {{game.guestClub.name}}</p>
+          </div>
+          <hr>
+          <div class="card__overlay" *ngIf="game.competition!=null">
+            <h5 class="heading__title">Competitions</h5>
+            <p>date : {{game.competition.date}}</p>
+            <p>Description : {{game.competition.note}}</p>
+          </div>
+          <hr>
+          <div class="card__overlay" *ngIf="game.cup!=null">
+            <h5 class="heading__title">Coupes</h5>
+            <p> {{game.cup.startDate | date}} - {{game.cup.endDate | date}}</p>
+            <p> {{game.cup.name}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ul>
+</div>
