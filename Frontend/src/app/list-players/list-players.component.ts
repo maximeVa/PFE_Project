@@ -8,8 +8,14 @@ import {player} from './models/player';
   templateUrl: './list-players.component.html',
   styleUrls: ['./list-players.component.scss']
 })
-export class ListPlayersComponent implements OnInit{
-  public ALLplayers: player[] = [] ;
+export class ListPlayersComponent implements OnInit {
+  public clubs: club[] = [];
+  public ALLplayers: player[] = [];
+  public ALLplayersCopy: player[] = this.ALLplayers;
+  public ALLplayersCopy3: player[] = this.ALLplayers;
+
+  constructor(private listPlayersService: ListPlayersService) {
+  }
 
   ngOnInit() {
     this.listPlayersService.getClubs().subscribe(
