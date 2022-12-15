@@ -11,11 +11,6 @@ import {player} from './models/player';
 export class ListPlayersComponent implements OnInit {
   public clubs: club[] = [];
   public ALLplayers: player[] = [];
-  public playersWithoutClub: player[] = [];
-  public playersByDivision1A: player[] = [];
-  public playersByDivision2A: player[] = [];
-  public playersWithoutDivision: player[] = [];
-  public boolean = false;
   public ALLplayersCopy: player[] = this.ALLplayers;
   public ALLplayersCopy3: player[] = this.ALLplayers;
 
