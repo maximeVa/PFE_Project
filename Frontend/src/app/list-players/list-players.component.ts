@@ -1,19 +1,16 @@
-import { Component , OnInit } from '@angular/core';
-import { ListPlayersService } from './list-players.service';
-import { club } from './models/club';
-import { player } from './models/player';
+import {Component, OnInit} from '@angular/core';
+import {ListPlayersService} from './list-players.service';
+import {club} from './models/club';
+import {player} from './models/player';
 
 @Component({
   selector: 'app-list-players',
   templateUrl: './list-players.component.html',
   styleUrls: ['./list-players.component.scss']
 })
-
 export class ListPlayersComponent implements OnInit{
   public ALLplayers: player[] = [] ;
-  public playersWithoutClub : player[] = [];
 
-  constructor(private listPlayersService: ListPlayersService) { }
   ngOnInit() {
     this.listPlayersService.getClubs().subscribe(
       (response: club[]) => {
@@ -43,6 +40,20 @@ export class ListPlayersComponent implements OnInit{
         console.log(error);
       }
     );
+  }
+
+  sortBy(value: string): void {
+    let table = this.ALLplayersCopy
+    if (value === "rang") {
+      this.ALLplayers = table.sort((a, b) => a.rankingPoints - b.rankingPoints).reverse()
+    } else if (value === "division1A") {
+      this.ALLplayers = table.filter((data) => data?.club?.division?.name === "1A")
+    } else if (value === "division2A") {
+      this.ALLplayers = table.filter((data) => data?.club?.division?.name === "2A")
+    } else if (value === "null") {
+      this.ALLplayers = this.ALLplayersCopy3
+    }
+
   }
 
 }
