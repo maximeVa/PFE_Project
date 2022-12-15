@@ -22,7 +22,8 @@ export class ListPlayersService {
   }
 
   public getPlayers(): Observable<player[]> {
-    return this.http.get<player[]>(BASE_URL + 'users');
+    return this.http.get<player[]>(BASE_URL + 'usersWithoutClub');
   }
+
 
 }

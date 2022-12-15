@@ -9,7 +9,8 @@ import { player } from './models/player';
   styleUrls: ['./list-players.component.scss']
 })
 export class ListPlayersComponent implements OnInit{
-  public clubs : club[] = []; 
+  public clubs : club[] = [];
+  public ALLplayers: player[] = [] ;
   public playersWithoutClub : player[] = [];
 
   constructor(private listPlayersService: ListPlayersService) { }
@@ -17,6 +18,13 @@ export class ListPlayersComponent implements OnInit{
     this.listPlayersService.getClubs().subscribe(
       (response: club[]) => {
         this.clubs = response;
+        //loop through clubs and add players to ALLplayers
+        this.clubs.forEach((club) => {
+          club.players.forEach((player) => {
+            player.club = club;
+            this.ALLplayers.push(player);
+          });
+        });
       },
       (error) => {
         console.log(error);
@@ -25,8 +33,12 @@ export class ListPlayersComponent implements OnInit{
 
     this.listPlayersService.getPlayers().subscribe(
       (response: player[]) => {
-        console.log(response);
-        this.playersWithoutClub = response;
+        // loop trough players and add them to ALLplayers
+        response.forEach((player) => {
+          this.ALLplayers.push(player);
+        });
+        console.log(this.ALLplayers);
+
       },
       (error) => {
         console.log(error);

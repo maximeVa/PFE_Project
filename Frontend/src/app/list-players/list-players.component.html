@@ -1,8 +1,6 @@
 <section>
   <div class="container-fluid">
-    <div
-      class="row grid_header text-center align-items-center text-white bg-dark"
-    >
+    <div class="row grid_header text-center align-items-center text-white bg-dark">
       <div class="col">Division</div>
       <div class="col">Nom</div>
       <div class="col">Prénom</div>
@@ -13,27 +11,20 @@
       <div class="col">Archive</div>
     </div>
     <div class="grid_body">
-      <div *ngFor="let club of clubs">
-        <div *ngFor="let player of club.players">
+      <div *ngFor="let player of ALLplayers">
           <div class="row text-center">
-            <div class="col">{{ club.division.name }}</div>
+            <div class="col">{{ player?.club?.division?.name || "/" }}</div>
             <div class="col">{{ player.lastname }}</div>
             <div class="col">{{ player.firstname }}</div>
-            <div class="col">{{ club.name }}</div>
+            <div class="col">{{ player?.club?.name || "/" }}</div>
             <div class="col">{{ player.id }}</div>
             <div class="col">{{ player.birthDate | date : "yyyy-MM-dd" }}</div>
 
             <div class="col" *ngIf="player.rankingPoints < 400">4P</div>
-            <div
-              class="col"
-              *ngIf="player.rankingPoints >= 400 && player.rankingPoints < 800"
-            >
+            <div class="col" *ngIf="player.rankingPoints >= 400 && player.rankingPoints < 800">
               3P
             </div>
-            <div
-              class="col"
-              *ngIf="player.rankingPoints >= 800 && player.rankingPoints < 1200"
-            >
+            <div class="col" *ngIf="player.rankingPoints >= 800 && player.rankingPoints < 1200">
               2P
             </div>
             <div class="col" *ngIf="player.rankingPoints >= 1200">1P</div>
@@ -41,35 +32,7 @@
               <a href="#" class="px-2 py-2 mr-md-1 rounded">Details</a>
             </div>
           </div>
-        </div>
-      </div>
-      <div *ngFor="let player of playersWithoutClub">
-        <div class="row text-center">
-          <div class="col"> </div>
-          <div class="col">{{ player.lastname }}</div>
-          <div class="col">{{ player.firstname }}</div>
-          <div class="col"></div>
-          <div class="col">{{ player.id }}</div>
-          <div class="col">{{ player.birthDate | date : "yyyy-MM-dd" }}</div>
 
-          <div class="col" *ngIf="player.rankingPoints < 400">4P</div>
-          <div
-            class="col"
-            *ngIf="player.rankingPoints >= 400 && player.rankingPoints < 800"
-          >
-            3P
-          </div>
-          <div
-            class="col"
-            *ngIf="player.rankingPoints >= 800 && player.rankingPoints < 1200"
-          >
-            2P
-          </div>
-          <div class="col" *ngIf="player.rankingPoints >= 1200">1P</div>
-          <div class="col">
-            <a href="#" class="px-2 py-2 mr-md-1 rounded">Details</a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
