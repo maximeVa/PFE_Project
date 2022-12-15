@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   selector: 'app-admin-board',
   templateUrl: './admin-board.component.html',
   styleUrls: ['./admin-board.component.scss']
-  
+
 })
 export class AdminBoardComponent implements OnInit {
   admins: any[] =[];
@@ -18,8 +18,8 @@ export class AdminBoardComponent implements OnInit {
     this.admins = data as any[];
   });
 
-  
-  
-  
+
+
+
   }
 }

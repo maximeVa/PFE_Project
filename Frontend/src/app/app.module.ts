@@ -17,7 +17,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { LeaderPlayerComponent } from './leader-player/leader-player.component';
 import { CompetitionComponent } from './competitions/competition/competition.component';
 import { CompetitionsService } from './competitions/competitions.service';
-import { CompetitionComponent } from './competition/competition.component';
 import { AdminBoardComponent } from './admin-board/admin-board.component';
 import { ImportantLinksComponent } from './important-links/important-links.component';
 import { GameRulesComponent } from './game-rules/game-rules.component';
