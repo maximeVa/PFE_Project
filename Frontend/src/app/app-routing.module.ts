@@ -24,10 +24,7 @@ const routes: Routes = [
   {path: 'competition/:divisionName', component: CompetitionComponent},
   {path: 'listPlayers', component: ListPlayersComponent},
   {path: 'listClubs', component: ListClubsComponent},
-  // a retirer apres car c'est juste pour tester la page GameRecaps
-  {path: 'gameRecaps', component: GameRecapsComponent},
-
-
+  {path: 'gameRecaps/:id', component: GameRecapsComponent},
   {path: 'adminBoard', component: AdminBoardComponent},
   {path: 'gameRules', component: GameRulesComponent},
   {path: 'links', component: ImportantLinksComponent},
